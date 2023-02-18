@@ -63,6 +63,10 @@ class RocketVCU118Config extends Config(
   new chipyard.RocketConfig)
 // DOC include end: AbstractVCU118 and Rocket
 
+class GemminiVCU118Config extends Config(
+  new WithVCU118Tweaks ++
+  new chipyard.CustomGemminiSoCConfig)
+
 class BoomVCU118Config extends Config(
   new WithFPGAFrequency(50) ++
   new WithVCU118Tweaks ++
